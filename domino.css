@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.center{
+    margin: 50px auto;
+    width: 620px;
+    /*border: 1px solid red;*/
+}
+.domino{
+    float: left;
+    border: 2px solid black;
+    height: 242px;
+    width: 150px;
+    margin: 0 25px;
+    -webkit-box-shadow: 16px 9px 66px 1px rgba(0,0,0,0.54);
+    -moz-box-shadow: 16px 9px 66px 1px rgba(0,0,0,0.54);
+    box-shadow: 16px 9px 66px 1px rgba(0,0,0,0.54);
+}
+.circle{
+    	width: 10px;
+    	height: 10px;
+    	background: black;
+    	-moz-border-radius: 5px;
+    	-webkit-border-radius: 5px;
+    	border-radius: 5px;
+    margin: 15px auto;
+    }
+.piece{
+    height: 50%;
+    width: 100%;
+}
+.point{
+ /*border: 1px solid gold;*/
+    width: 50px;
+    height: 40px;
+    float: left;
+}
