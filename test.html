@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="test.css" rel="stylesheet">
+</head>
+<body>
+<div id="center">
+    <div id="test">
+        Шановний учаснику конкурсу «Вчитель-новатор»!
+        Заповніть, будь ласка, реєстраційну анкету українською мовою.
+        Прохання надати повну відповідь на всі поставлені запитання.
+        Якщо ви подаєте декілька конкурсних робіт, будь ласка,
+        заповніть дану анкету для кожної конкурсної роботи окремо.
+        Дякуємо Вам за участь у конкурсі та бажаємо успіхів!
+    </div>
+    <div>
+        <form action="#">
+            <div>
+                <input type="text" placeholder="Прізвище" name="name">
+                <input type="text" placeholder="Ім’я та по-батькові" name="sname">
+                <input type="text" placeholder="Назва конкурсної роботи" name="name_work">
+                <select>
+                    <option>Навчальний проект</option>
+                    <option>Виховний проект</option>
+                    <option>Позашкільний проект</option>
+                    <option>Навчальний контент</option>
+                    <option>Он-лайновий освітній ресурс</option>
+                    <option>Навчально-методичне забезпечення</option>
+                </select>
+            </div>
+            <div>
+                <span>Чи була выпробована ваша робота?</span><br>
+                <span>Так</span><input type="radio" name="task" value="yes">
+                <p>
+                                    <span>Для задания(один уровень)</span>
+                </p>
+                <span>ні</span><input type="radio" name="task" value="no">
+            </div>
+            <div>
+                Якщо так, то на якому рівні?
+                <input type="text" placeholder="Рівень" name="level">
+                <br>
+                Повна назва установи, де ви працюєте
+                <input type="text" placeholder="Компанія" name="name_company">
+                <br>
+                Ваша посада
+                <input type="text" placeholder="Посада" name="position">
+                <br>
+                Місто/населений пункт
+                <input type="text" placeholder="Населений пункт" name="city">
+                <br>
+                Область
+                <select>
+                    <option class="obl">Автономна республіка Крим</option>
+                    <option class="obl">Вінницька область</option>
+                    <option class="obl">Волинська область</option>
+                    <option class="obl">Дніпропетровська область</option>
+                    <option class="obl">Донецька область</option>
+                    <option class="obl">Житомирська область</option>
+                    <option class="obl">Закарпатська область</option>
+                    <option class="obl">Запорізька область</option>
+                    <option class="obl">Івано-Франківська область</option>
+                    <option class="obl">Київська область</option>
+                    <option class="obl">Кіровоградська область</option>
+                    <option class="obl">Луганська область</option>
+                    <option class="obl">Львівська область</option>
+                    <option class="obl">Миколаївська область</option>
+                    <option class="obl">Одеська область</option>
+                    <option class="obl">Полтавська область</option>
+                    <option class="obl">Рівненська область</option>
+                    <option class="obl">Сумська область</option>
+                    <option class="obl">Тернопільська область</option>
+                    <option class="obl">Харківська область</option>
+                    <option class="obl">Херсонська область</option>
+                    <option class="obl">Хмельницька область</option>
+                    <option class="obl">Черкаська область</option>
+                    <option class="obl">Чернівецька область</option>
+                    <option class="obl">Чернігівська область</option>
+                    <option class="obl">м. Київ</option>
+                    <option class="obl">м. Севастополь</option>
+
+                </select>
+                <br>
+                Мобільний телефон
+                <input type="tel" placeholder="Телефон" name="phone">
+
+                <br>
+                Електронна пошта
+                <input type="email" placeholder="Пошта" name="email">
+                <br>
+                Ви брали участь у попередніх конкурсах «Вчитель-новатор»?
+                <span>Так</span><input type="radio" name="competition" value="yes">
+                <span>ні</span><input type="radio" name="competition" value="no">
+                <br>
+                Якщо так, то вкажіть, коли саме. <input type="date" name="date">
+                <br>
+                Яким чином ви дізналися про конкурс «Вчитель-новатор»?<br>
+                <input type="checkbox" name="how">Сайт МОН молодьспорту<br>
+                <input type="checkbox" name="how">Сайт Майкрософт Україна<br>
+                <input type="checkbox" name="how">Сайт Мережі «Партнерство в навчанні»<br>
+                <input type="checkbox" name="how">Обласний ІППО<br>
+                <input type="checkbox" name="how">Обласне управління освіти<br>
+                <input type="checkbox" name="how">Міське управління освіти<br>
+                <input type="checkbox" name="how">Сайт МОН молодьспорту<br>
+                <input type="checkbox" name="how">Osvita.com<br>
+                <input type="checkbox" name="how">Gurt.org.ua<br>
+                <input type="text" name="how"> інше<br>
+                <input type="checkbox" name="agree" required>Я даю згоду на обробку моїх персональних даних і погоджуюся
+                з Політикою конфіденційності<br>
+                <input type="submit" value="Подати анкету">
+                <input type="reset" value="очистить поля">
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
