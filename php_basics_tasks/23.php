@@ -1,7 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 17:10
- */
+echo"sfsdf";
+print_r("dsfsdfsd");
+var_dump("rgkeprg");

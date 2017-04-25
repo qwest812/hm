@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 16:24
- */
+
+//meters
+$s= 1000;
+//minutes
+$t= 40;
+
+$m=1000/(40*60);
+echo $m."m/s";
+$km=(1000/1000)/(40/60);
+echo $km."km/h";

@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 15:45
- */
+$day= date("d");
+switch($day){
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5: echo "Это рабочий день";
+        break;
+
+}

@@ -1,7 +1,3 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 15:45
- */
+$day= date("d");
+echo $day;

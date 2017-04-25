@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 16:25
- */
+$a = '78';
+$b = 78;
+
+var_dump($a==$b);

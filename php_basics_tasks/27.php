@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 17:11
- */
+<a href="http://prntscr.com/f09347">result  </a>

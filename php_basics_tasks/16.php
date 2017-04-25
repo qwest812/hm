@@ -1,7 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PC-1
- * Date: 24.04.2017
- * Time: 16:24
- */
+$a=8;
+$b=6;
+echo max($a,$b);
