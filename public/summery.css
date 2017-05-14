@@ -1,0 +1,25 @@
+h1 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 24px; }
+
+body {
+  font-family: "Comic Sans MS";
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 1200px;
+  border: 1px solid black; }
+
+.strong {
+  font-weight: bold;
+  font-size: 18px; }
+
+p {
+  text-indent: 20px; }
+
+p span {
+  margin-left: 10px; }
+
+/*# sourceMappingURL=summery.css.map */
