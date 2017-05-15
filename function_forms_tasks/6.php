@@ -22,22 +22,20 @@
 //
 //fileUpload();
 // Каталог, в который мы будем принимать файл:
-$uploaddir = './files/';
-$uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+if($_POST['submit']){
+    $uploaddir = './files/';
+    $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
 
-// Копируем файл из каталога для временного хранения файлов:
-var_dump($_FILES['file']['tmp_name']);
+    // Копируем файл из каталога для временного хранения файлов:
+    //var_dump($_FILES['file']['tmp_name']);
+    $a=file_get_contents($_FILES['file']['tmp_name']);
+    file_put_contents("./gallery/".$_FILES['file']['name'],$a,FILE_APPEND);
+    $countFile=scandir("./gallery");
+    //var_dump($countFile);
+    allImg($countFile);
 
-$a=file_get_contents($_FILES['file']['tmp_name']);
-file_put_contents("./gallery/".$_FILES['file']['name'],$a,FILE_APPEND);
-$countFile=scandir("./gallery");
-//var_dump($countFile);
-foreach ($countFile as $value){
-
-if(strpos($value,"jpg")) {
-    echo "<img src='./gallery/" . $value . "'>";
 }
-}
+
 //if (copy($_FILES['file']['tmp_name'], $uploadfile))
 //{
 //    echo "<h3>Файл успешно загружен на сервер</h3>";
@@ -50,3 +48,11 @@ if(strpos($value,"jpg")) {
 //echo "<p><b>Mime-тип загруженного файла: ".$_FILES['file']['type']."</b></p>";
 //echo "<p><b>Размер загруженного файла в байтах: ".$_FILES['file']['size']."</b></p>";
 //echo "<p><b>Временное имя файла: ".$_FILES['file']['tmp_name']."</b></p>";
+function allImg($dir){
+    foreach ($dir as $value){
+
+        if(strpos($value,"jpg") or strpos($value,"jpeg")) {
+            echo "<img src='./gallery/" . $value . "' width='150px' height='150px'>";
+        }
+        }
+}
