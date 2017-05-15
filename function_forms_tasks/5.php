@@ -4,35 +4,49 @@
     <br>
     <input type="text" name="word" title="word" placeholder="word">
     <br>
-    <input type="submit" title="send" >
+    <input type="submit" title="send">
 </form>
 </html>
 
 <?php
-$direct =trim(htmlspecialchars($_POST['direct']));
-$direct=scandir($direct);
-$word=$_POST['word'];
-$direct=searchByWord($direct, $word);
+
+if ($_POST['direct'] && $_POST['word']){
+$direct = trim(htmlspecialchars($_POST['direct']));
+$direct = scandir($direct);
+$word = $_POST['word'];
+$direct = searchByWord($direct, $word);
+result($direct);
 ?>
 <pre>
+    <?php
+
+    }else{
+        echo"<div style='color: red'>Одно из полей не заполнено</div>";
+    }
+    ?>
+
+   </pre>
+
 <?php
-var_dump($direct);
-
-?>
-    </pre>
-
-<?php
-function searchByWord(array $arr, $word){
-
-    foreach ($arr as $key=>$value){
-        if(strpos($value,$word)!=0){
+function searchByWord(array $arr, $word)
+{
+    $q=array();
+   foreach ($arr as $key => $value) {
+//        echo $value."---".$word."<br>";
+        if($value==$word){
             $q[]=$value;
         }
     }
-    if($q[0]==''){
-        return false;
-    }else{
-        return $q;
-    }
+    return $q;
 
 }
+function result(array $arr){
+    if($arr[0]==0){
+        echo "По данному запросу ничего не найдено";
+    }else{
+    foreach ($arr as $key => $value) {
+            echo $value."<br>";
+        }
+    }
+}
+
