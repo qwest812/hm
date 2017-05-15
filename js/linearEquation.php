@@ -1,30 +1,53 @@
 <script type="text/javascript" >
-    var x1=[2,-9,9,9,-82];
+    var line1=[2,-9,9,9,-82];
 
-    var x2=[-1,-10,4,-10,-31];
+    var line2=[-1,-10,4,-10,-31];
 
-    var x3=[-5,-8,5,-9,-29];
+    var line3=[-5,-8,5,-9,-29];
 
-    var x4=[-5,2,0,5,-13];
-    function first(x) {
-        var firstX=x[0];
-        for(var i=0;i<x.length;i++){
-            x[i]=x[i]/firstX;
-            alert(x[i]);
+    var line4=[-5,2,0,5,-13];
+
+    //функция делит на первый елемент все елементы масива
+    function first(result) {
+        var firstX=result[0];
+        for(var i=0;i<result.length;i++){
+            result[i]=result[i]/firstX;
         }
+        return x;
     }
-function changeSymbol(y2) {
-        if(y2[0]<0){
-            for(var i=0; i<y2.length; i++){
-                y2[i]=-y2[i];
+    //если минусовое число, меняет весь масив
+function changeSymbol(number,arr) {
+        if(number[0]<0){
+            for(var i=0; i<arr.length; i++){
+                arr[i]=-arr[i];
 
             }
         }
-        console.log(y2);
-        return y2;
-
+        console.log(arr);
+        return arr;
 }
-var q=changeSymbol(x2);
-//    alert(q[1]);
+// удаляет первый елемент для подальшего довления в другие line
+function  equalX(arr ) {
+    if(arr[0]===1){
+        arr.shift();
+    }
+    return arr;
+}
+//обьеденяет массивы по значениям arr1 c 5-ю значениями и arr2 с 4-мя
+function combiningArray(arr1, arr2) {
+    var number=arr1[0];
+    arr1.shift();
+    window.write(number);
+//    var newArr=new Array;
+//
+//    for(var i;i<=arr1.length;i++){
+//        newArr[]=(number*arr1[i])+arr2[i];
+//    }
+//    return newArr;
+}
 
+line1=first(line1);
+    line1=equalX(line1);
+    line2=combiningArray(line2,line1);
+//    console.log(line2);
 </script>
