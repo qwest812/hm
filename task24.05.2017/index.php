@@ -42,9 +42,6 @@
         arr2.push(key2);
 
     }
-//console.log(doubleArr);
-
-
     function findKey(arr, val){
         for (var i=0;i<arr.length;i++){
             if(arr[i]==val){
@@ -64,32 +61,18 @@
             cryptWord[cryptWord.length]=doubleArr[findLetter][findLetterKrypt];
 
         }
-// зашифрованное слово
-//console.log(cryptWord);
+// crypt word
+console.log(cryptWord);
 //    console.log(arr2);
-/////////////////разшифровка
+/////////////////decrypt
     var uncryptWord=[];
-//    for(i=0;i<key.length;i++){
-//        findLetterKrypt=findKey(arr,key[i]);
-        for(j=0;j<cryptWord.length;j++){
-            findLetter=findKey(arr,cryptWord[j]);
-//            console.log(arr[findLetter]);
-//            console.log(cryptWord);
-//            console.log(findLetter);
+        for(j=0;j<key.length;j++){
+            findLetter=findKey(arr,key[j]);
             for(var m=0;m<arr.length;m++){
-
-                if(doubleArr[m][findLetter]==cryptWord[j]){
-//                    console.log(doubleArr[m][findLetter]);
-                    console.log(m);
+                if(doubleArr[findLetter][m]==cryptWord[j]){
+                    uncryptWord[uncryptWord.length]=arr[m];
                 }
             }
-//            arr2=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-//             var arrR=replase(arr2,findLetter);
-//            console.log(arrR);
-//            console.log(findLetter);
-//            uncryptWord[uncryptWord.length]=arr[findLetter];
-
-
     }
     console.log(uncryptWord);
 
