@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="index.html" method="get">
+    <p>Name</p>
+    <input type="text" id="name" title="name">
+    <p>Sname</p>
+    <input type="text" id="year" title="year">
+    <p>Your weight</p>
+</form>
+
+<script>
+
+window.addEventListener("load",function(){
+
+    var guard =document.getElementById('name');
+    var year =document.getElementById("year");
+
+    guard.addEventListener("keypress",function(e){
+        console.log(e.charCode);
+        if(e.charCode<65 ||  e.charCode>122){
+            console.log(e.charCode);
+
+            e.preventDefault();
+        }
+    },true);
+
+
+
+
+    year.addEventListener("keypress", function (w) {
+        console.log(w.charCode);
+        if(w.charCode<48 ||  w.charCode>57 ){
+                    console.log(w.charCode);
+
+                    w.preventDefault();
+                }
+
+    },true);
+},false);
+</script>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Как изменить размер текста – JavaScript</title>
+ 
+<script>
+function Font(step)
+{
+step = parseInt(step,10);
+var el = document.getElementById("content");
+var curFont = parseInt(el.style.fontSize,10);
+el.style.fontSize = (curFont+step) + 'px';
+}
+</script>
+ 
+</head>
+<body>
+<input type="button" onclick="Font(5);">Увеличить размер шрифта>
+<div id="content" style="font-size:14px;">
+BlogGood.ru
+</div>
+</body>
+</html>

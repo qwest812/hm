@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select name="color" title="color" id="color">
+    <option style="background: red">red</option>
+    <option style="background: blue">Blue</option>
+    <option style="background: green">green</option>
+</select>
+
+<p>Веедите размер шрифта</p>
+<input type="text" id="size" title="size">
+<br><br>
+<input type="button" onclick="save()" value="Увеличить текст">
+
+<div id="colorText" style="background: white">
+    <p id="text" style="font-size: 14px;">Установка компонентов даты
+
+    Следующие методы позволяют устанавливать компоненты даты и времени:
+
+    setFullYear(year [, month, date])
+    setMonth(month [, date])
+    setDate(date)
+    setHours(hour [, min, sec, ms])
+    setMinutes(min [, sec, ms])
+    setSeconds(sec [, ms])
+    setMilliseconds(ms)
+    setTime(milliseconds) (устанавливает всю дату по миллисекундам с 01.01.1970 UTC)
+    Все они, кроме setTime(), обладают также UTC-вариантом, например: setUTCHours().
+
+    Как видно, некоторые методы могут устанавливать несколько компонентов даты одновременно, в частности, setHours. При этом
+    если какая-то компонента не указана, она не меняется. Например:</p>
+</div>
+
+</body>
+</html>
+<script>
+
+
+</script>
+<script>
+    document.addEventListener("load",function(){
+        (function (){
+    var sizeCookie = getValueStorage("size");
+            var sizeText= document.getElementById('text');
+    //        var sizeTextV=parseInt((sizeText.fontSize).value,10);
+            var sizeTextV= sizeText.style.fontSize;
+            var sizeTextP=parseInt(sizeTextV,10);
+
+
+            if(sizeTextP>0){
+                sizeText.style.fontSize=sizeCookie+"px";
+            }
+
+})();
+
+        (function(){
+            var colorCookie= getValueStorage("color");
+            var df=getId("colorText");
+            if(colorCookie==undefined){
+                colorCookie="white";
+            }
+            console.log(df);
+            console.log(colorCookie);
+            df.style.background=colorCookie;
+        })();
+
+        function getValueStorage(nameStore){
+        var value  =window.localStorage.getItem(nameStore);
+            return value;
+
+        }
+    },true);
+    function save() {
+        var Time =60;
+        var size =getId("size");
+        var text = getId("text");
+        var font = parseInt(text.style.fontSize, 10);
+        var step = parseInt(size.value);
+        if(isNaN(step)){
+            step=0;
+        }
+        var newSize =font+step;
+        text.style.fontSize = newSize + "px";
+        var colorText = getId("colorText");
+        var color = getId("color");
+        var value2=color.value;
+       colorText.style.background=value2;
+        window.localStorage.setItem("size",newSize);
+        window.localStorage.setItem("color",value2);
+    }
+    function getId(id){
+        var idContent=document.getElementById(id);
+        if(idContent!=null){
+            return idContent;
+        }else{
+            console.log("Данных по id: "+id+" не найдено!");
+        }
+
+    }
+
+</script>

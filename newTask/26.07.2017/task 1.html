@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="index.html" method="get">
+    <p>Name</p>
+    <input type="text" id="name" title="name">
+    <p>Sname</p>
+    <input type="text" id="Sname" title="Same">
+    <p>Year</p>
+    <input type="text" id="year" title="year">
+    <p>Your weight</p>
+    <input type="text" id="weight" title="weight">
+    <br><br>
+
+    <input  type="button" onclick="myTest()" id="send" value="отправить">
+</form>
+
+
+
+
+</body>
+</html>
+
+<script>
+
+ function myTest(){
+    var name= (document.getElementById('name')).value;
+
+     var Sname= (document.getElementById('Sname')).value;
+     var year= (document.getElementById('year')).value;
+     var weight= (document.getElementById('weight')).value;
+     var regName= new RegExp('^[a-zA-Z]+$');
+     var regYear= new RegExp('^[0-9]+$');
+     var regWeight= new RegExp('^[0-9]+.+[0-9]$');
+
+
+     //проверка на англ буквы
+     if(regName.test(name)){
+    alert(true);
+     }else{
+         alert(false);
+     }
+
+// проверка на целые числа
+     if(regYear.test(year)){
+         alert("year true");
+          }else{
+              alert("year false");
+          }
+
+// проверка на только дробные числа
+     if(regWeight.test(weight)){
+         alert(true);
+          }else{
+              alert(false);
+          }
+     console.log(name,Sname,year,weight);
+ }
+</script>

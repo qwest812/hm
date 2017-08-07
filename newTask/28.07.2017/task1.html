@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    window.addEventListener("load",function(){
+        console.log(document.cookie);
+            var data= new Date();
+        var tim =data.getMonth()+1;
+        var time= data.getFullYear()+':'+data.getMonth()+':'+data.getDay();
+        document.cookie = "time=".time;
+        console.log(tim);
+
+        },false);
+
+
+</script>

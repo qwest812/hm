@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="height: 25px; width: 25px; background: white; border: 1px solid red; " id="box">
+</div>
+</body>
+</html>
+
+<script>
+
+    window.addEventListener('keydown', function () {
+
+        var box = document.getElementById('box');
+        console.log(event.keyCode);
+        if (event.keyCode == 82) {
+            box.style.background = "red";
+        } else if (event.keyCode == 66) {
+            box.style.background = "blue";
+        } else if (event.keyCode == 71) {
+            box.style.background = "green";
+        }
+        if (event.keyCode == 39) {
+            var left = parseInt(box.style.marginLeft, 10);
+            if (!left) {
+                left = 0;
+            }
+            box.style.marginLeft = left + 10 + "px";
+        }
+        if (event.keyCode == 37) {
+                    var left = parseInt(box.style.marginLeft, 10);
+                    if (!left) {
+                        left = 0;
+                    }
+                    box.style.marginLeft = left - 10 + "px";
+                }
+        if (event.keyCode == 40) {
+                    var top= parseInt(box.style.marginTop, 10);
+                    if (!top) {
+                        top = 0;
+                    }
+                    box.style.marginTop = top + 10 + "px";
+                }
+        if (event.keyCode == 38) {
+                            var top= parseInt(box.style.marginTop, 10);
+                            if (!top) {
+                                top = 0;
+                            }
+                            box.style.marginTop = top - 10 + "px";
+                        }
+
+    }, true);
+</script>
+
