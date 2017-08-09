@@ -1,0 +1,17 @@
+[
+{
+"name":"ivan",
+"work":"PHP",
+"salary":1000
+},
+{
+"name":"Petr",
+"work":"JS",
+"salary":1500
+},
+{
+"name":"Kate",
+"work":"Test",
+"salary":400
+}
+]
