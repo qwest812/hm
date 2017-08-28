@@ -3,7 +3,7 @@ var btn = document.getElementById('btn');
 var animalContainer = document.getElementById("animal-info");
 var click = 0;
 btn.addEventListener("click", function () {
-    ourRequest.open("GET", "http://education/hm/newTask/02.08.2017/JSON.json");
+    ourRequest.open("GET", "http://education/hm/newTask/02.08.2017/JSON.json", true);
     ourRequest.onload = function () {
         var ourData = JSON.parse(ourRequest.responseText);
         render(ourData);
